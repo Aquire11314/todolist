@@ -1,8 +1,5 @@
-server:
-  port: 8081
+
 spring:
-  profiles:
-    active: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://119.23.225.124:3306/todolist
@@ -15,8 +12,6 @@ spring:
       max-request-size: 30MB #maxRequestSize是设置总上传的数据大小
   resources:
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
-
-
 mybatis-plus:
   global-config:
     db-config:
@@ -25,9 +20,11 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8081
 
 #自定义的属性，指定了一个路径，注意要以/结尾
 web:
-  upload-path: F:/img/test1/
+  upload-path: F:/img/test2/
 
 
